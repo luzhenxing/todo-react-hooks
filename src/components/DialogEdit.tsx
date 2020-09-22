@@ -15,7 +15,7 @@ const DialogInfo = (props: any) => {
     >
       <Stack tokens={{ childrenGap: 10 }}>
         <StackItem>
-          <TextField label="创建时间" defaultValue={formatDate(props.item.date)} disabled />
+          <TextField label="创建时间" defaultValue={formatDate(new Date(props.item.date))} disabled />
         </StackItem>
         <StackItem>
           <TextField label="任务" defaultValue={title} multiline rows={3} onChange={(e: React.FormEvent, val: string | undefined) => {

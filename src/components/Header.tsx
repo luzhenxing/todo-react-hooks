@@ -61,7 +61,7 @@ function Header () {
           >
             <Stack tokens={stackTokens} horizontalAlign="end">
               <Stack.Item>
-                <TextField placeholder="任务" style={{width: 300}} value={title} onChange={(_, v) => setTitle(v || '')}></TextField>
+                <TextField placeholder="任务" style={{width: 300}} value={title} autoComplete="off" onChange={(_, v) => setTitle(v || '')}></TextField>
               </Stack.Item>
               <Stack.Item>
                 <PrimaryButton type="submit" onClick={addItem}>增加todo</PrimaryButton>

@@ -7,15 +7,10 @@ function Toast() {
   const type = state.toast.type
   const toastType = {
     'info': MessageBarType.info,
-    /** Error styled MessageBar */
     'error': MessageBarType.error,
-    /** Blocked styled MessageBar */
     'blocked': MessageBarType.blocked,
-    /** SevereWarning styled MessageBar */
     'severeWarning': MessageBarType.severeWarning,
-    /** Success styled MessageBar */
     'success': MessageBarType.success,
-    /** Warning styled MessageBar */
     'warning': MessageBarType.warning
   }
   return (

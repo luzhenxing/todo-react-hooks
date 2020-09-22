@@ -31,16 +31,10 @@ function TodoList() {
   }, [])
 
   const fetchTodoData = () => {
-    const data: Array<Item> = []
-    for (let i = 0 ; i < 3; i++) {
-      data.push({
-        title: `${i}: 学习`,
-        status: false,
-        date: new Date()
-      })
-    }
+    // const data: Array<Item> = JSON.parse(localStorage.getItem('todo') || '[]')
+
     setTimeout(() =>{
-      dispatch({type: FETCH_ITEM, item: data})
+      dispatch({type: FETCH_ITEM})
     }, 1500)
   }
 
