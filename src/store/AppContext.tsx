@@ -42,10 +42,8 @@ const AppProvider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   useEffect(() => {
-    if (state.showToast) {
-      if (state.toast.duration) {
-        setTimeout(() => dispatch({ type: HIDE_TOAST }), state.toast.duration)
-      }
+    if (state.showToast && state.toast.duration) {
+      setTimeout(() => dispatch({ type: HIDE_TOAST }), state.toast.duration)
     }
   }, [state.showToast]);
 
